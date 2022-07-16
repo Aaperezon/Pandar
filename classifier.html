@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load MobileNet -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <!-- Load KNN Classifier -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+ </head>
+
+<body>
+  <img width="250px" id='test' src='/images/hogar/1.jpg '/>
+
+  <script>
+    fetch('./classifier.json')
+      .then(response => response.json())
+      .then(train_data => {
+        init(train_data);
+      })
+      .catch(error => console.log(error));      
+
+  
+
+    const init = async function(train_data) {
+      let waitForImage = (image) =>{
+        return new Promise(resolve => {
+          image.onload = function () {
+                resolve('resolved');
+            }
+        });
+      }
+
+      const classifier = knnClassifier.create();
+      const mobilenetModule = await mobilenet.load();
+
+      for(var i = 0; i < train_data.length; i++ ){
+        for(var j = 1; j <= train_data[i].quantity; j++){
+          var image = new Image();
+          image.src = './images/'+train_data[i].folder+'/'+j+'.jpg';
+          await waitForImage(image)
+          var logits = mobilenetModule.infer(image, true);
+          classifier.addExample(logits, train_data[i].class);
+        }
+      }
+
+      // Make a prediction.
+      const x = tf.browser.fromPixels(document.getElementById('test'));
+      const xlogits = mobilenetModule.infer(x, true);
+      console.log('Predictions:');
+      const result = await classifier.predictClass(xlogits);
+      console.log(result.confidences);
+    }
+
+
+  </script>
+</body>
+
+</html>
