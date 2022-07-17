@@ -55,7 +55,7 @@ class Flower{
         this.velocity_size = Math.random() * 0.3 + 0.2
         this.max_size = this.size + Math.random() * 160
         this.image = new Image()
-        this.image.src = "../images/flower.png"
+        this.image.src = "../images/calavera.png"
         this.size > 9.5 ? this.will_flower = true : this.will_flower = false
         this.angle = 0
         this.velocity_angle = Math.random() * 0.05 - 0.025
