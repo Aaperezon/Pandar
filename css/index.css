@@ -185,3 +185,93 @@ h2::before
 {
     transform: scaleX(1);
 }
+.navigation
+{
+    position: fixed;
+    inset: 20px;
+    background-color: #287bff;
+    width: 80px;
+    border-left: 10px solid #287bff;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 15px 15px 25px rgb(0, 0, 0,0.05);
+    transition: 0.5s;
+}
+.navigation.active
+{
+    width: 300px;
+    border-radius: 20px;
+}
+.toogle
+{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0,0, 0.15);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toogle::before
+{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #365fa1;
+    transform: translateY(-5px);
+    transition: 1s;
+}
+.toogle::after
+{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #365fa1;
+    transform: translateY(-5px);
+    transition: 1s;
+}
+.navigation.active .toogle::before
+{
+    transform: translateY(0px) rotate(-405deg);
+}
+.navigation.active .toogle::after
+{
+    transform: translateY(0px) rotate(225deg);
+}
+.navigation ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 100%; 
+}
+.navigation ul li:hover
+{
+    background: #fff ;
+    color: #222;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
