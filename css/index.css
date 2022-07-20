@@ -200,7 +200,7 @@ h2::before
 }
 .navigation.active
 {
-    width: 200px;
+    width: 320px;
     border-radius: 20px;
 }
 .toogle
@@ -237,7 +237,7 @@ h2::before
     height: 3px;
     border-radius: 3px;
     background: #365fa1;
-    transform: translateY(-5px);
+    transform: translateY(5px);
     transition: 1s;
 }
 .navigation.active .toogle::before
@@ -315,6 +315,15 @@ h2::before
     position: relative;
     display: block;
     min-width: 60px;
+    height: 40px;
+    line-height: 70px;
+    text-align: center;
+}
+.imgIcon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
     height: 60px;
     line-height: 70px;
     text-align: center;
@@ -327,9 +336,8 @@ h2::before
 {
     position: relative;
     display: block;
-    padding: 0 40px;
+    padding: 0 20px;
     height: 60px;
     line-height: 60px;
-    text-align: start;
     white-space: nowrap;
 }
