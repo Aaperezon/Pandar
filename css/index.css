@@ -200,7 +200,7 @@ h2::before
 }
 .navigation.active
 {
-    width: 300px;
+    width: 200px;
     border-radius: 20px;
 }
 .toogle
@@ -321,13 +321,13 @@ h2::before
 }
 .navigation ul li a .icon ion-icon
 {
-    font-size: 1.75em;
+    font-size: 2em;
 }
 .navigation ul li a .title
 {
     position: relative;
     display: block;
-    padding: 0 10px;
+    padding: 0 40px;
     height: 60px;
     line-height: 60px;
     text-align: start;
