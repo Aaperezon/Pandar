@@ -185,6 +185,7 @@ h2::before
 {
     transform: scaleX(1);
 }
+
 .navigation
 {
     position: fixed;
@@ -259,11 +260,42 @@ h2::before
     position: relative;
     list-style: none;
     width: 100%; 
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 .navigation ul li:hover
 {
     background: #fff ;
-    color: #222;
+}
+.navigation ul li:nth-child(1)
+{
+    top: 20px;
+    margin-bottom: 40px;
+    background: none;
+}
+.navigation ul li:not(:first-child):hover::before
+{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 7.5px 7.5px 0 7.5px #fff;
+}
+.navigation ul li:not(:first-child):hover::after
+{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 7.5px -7.5px 0 7.5px #fff;
 }
 
 .navigation ul li a
@@ -274,4 +306,30 @@ h2::before
     display: flex;
     text-decoration: none;
     color: #fff;
+}
+.navigation ul li:hover:not(:first-child) a{
+    color: #365fa1;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon
+{
+    font-size: 1.75em;
+}
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
 }
