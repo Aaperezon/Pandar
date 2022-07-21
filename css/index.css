@@ -103,6 +103,12 @@ body
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
+#index{
+    position: fixed;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
 #index h2
 {
     position: absolute;

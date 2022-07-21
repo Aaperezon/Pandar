@@ -19,7 +19,7 @@ let init = () =>{
 
     const btnEmpezar = document.getElementById('btnEmpezar');
     btnEmpezar.addEventListener("click",() => {
-        document.getElementById('index').setAttribute("hidden","")
+        document.getElementById('index').setAttribute("hidden","true")
     
         fetch('./videosgallery.html')
         .then(response=> response.text())
