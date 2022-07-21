@@ -4,21 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/logoEtsy.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-
-    <title>Pandar</title>
-    <style>
-        html, body{
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-    </style>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Etsy "Conoce México"</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <div class="container">
@@ -57,18 +47,10 @@
         </ul> 
         <div class="toogle"></div>
     </div>
-  
-    <script>
-        let navigation= document.querySelector('.navigation');
-        let toogle= document.querySelector('.toogle');
-        toogle.onclick = function(){
-            navigation.classList.toggle('active');
-        }
-    </script>
         <div class="bubbles">
             <h2  data-text="Creative...">Creative...</h2>
             <div class="middle">
-                <button class="boton boton1">Ver mas</button>
+                <button class="boton boton1" id="btnEmpezar">Ver mas</button>
             </div>
             <div style="width: 100vw;">
                 <span style="--i:11;"><img  src="./images/logo.png"></img></span>
@@ -114,15 +96,7 @@
             </div>
         </div>
     </div>
-    <!--<div class="menu">
-        <img class="logo-image" src="./images/logo.png" alt="" srcset="">
-        <button class="botonesMenu">Tienda</button>
-        <button class="botonesMenu">Contacto</button>
-        <button class="botonesMenu">Acerca de nosotros</button>
-        <button class="botonesMenu">Comprar</button>
-    </div> -->
-
-
+    <script src="./js/script.js"></script>
 </body>
 <footer>
     <link rel="stylesheet" href="./css/index.css">
