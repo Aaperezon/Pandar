@@ -38,5 +38,9 @@ let init = () =>{
             }
         });
     })
+    var url_string = (window.location.href).toLocaleLowerCase()
+    var url = new URL(url_string)
+    var page = url.searchParams.get("page")
+    console.log(page);
 }
 window.addEventListener("load", init());
