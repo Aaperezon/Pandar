@@ -55,6 +55,8 @@ body
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    z-index: 1;
+
 }
 .bubbles
 {
@@ -108,6 +110,7 @@ body
     display: flex;
     text-align: center;
     justify-content: center;
+    z-index: 1;
 }
 #index h2
 {
@@ -195,14 +198,15 @@ body
 .navigation
 {
     position: fixed;
-    inset: 20px;
-    background-color: #287bff;
+    inset: 5vh;
+    background-color: #287affe5;
     width: 80px;
     border-left: 10px solid #287bff;
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 15px 15px 25px rgb(0, 0, 0,0.05);
     transition: 0.5s;
+    z-index: 1;
 }
 .navigation.active
 {
@@ -223,6 +227,8 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+
 }
 .toogle::before
 {
@@ -358,9 +364,12 @@ body
     box-shadow: 0 3px 13px 1px rgb(255, 255, 255);
     position: absolute;
     left: 12vw;
+    right: 8vw;
     top: 5vh;
     max-width: 80vw;
     max-height: 90vh;
     overflow: auto;
+    transition: 0.5s;
+    z-index: 1;
 
 }
