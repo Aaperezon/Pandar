@@ -13,3 +13,17 @@ video.forEach(play => play.addEventListener('click',() =>{
         play.currentTime=0;
     }
 }));
+
+
+let init = () =>{
+
+    const btnEmpezar = document.getElementById('btnEmpezar');
+    btnEmpezar.addEventListener("click",() => {
+        document.getElementById('index').setAttribute("hidden","")
+    
+        fetch('./videosgallery.html')
+        .then(response=> response.text())
+        .then(text=> document.getElementById('main-container').innerHTML = text);
+    })
+}
+window.addEventListener("load", init());

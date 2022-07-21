@@ -3,17 +3,9 @@
     --purple: #8e44ad;
 }
 
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html
-{
-    font-size: 62.5%;
-}
-.container .heading
+
+
+.heading
 {
     font-size: 3rem;
     margin: 2rem 0;

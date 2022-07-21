@@ -103,7 +103,7 @@ body
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-h2
+#index h2
 {
     position: absolute;
     font-size: 7vw;
@@ -112,7 +112,7 @@ h2
     text-transform: uppercase;
     margin-top: 40vh;
 }
-h2::before
+#index h2::before
 {
     content: attr(data-text);
     position: absolute;
@@ -340,4 +340,24 @@ h2::before
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
+}
+
+
+
+
+
+/* main container settings */
+#main-container{
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 3px 13px 1px rgb(255, 255, 255);
+    position: absolute;
+    left: 12vw;
+    top: 5vh;
+    max-width: 80vw;
+    max-height: 90vh;
+    overflow: auto;
+
+}
+.center {
+
 }
