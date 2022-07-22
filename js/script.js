@@ -22,10 +22,10 @@ let init = () =>{
         }
     }));
 
-
-    const btnEmpezar = document.getElementById('btnEmpezar');
     document.getElementById('main-container').setAttribute("style","display:none;")
 
+
+    const btnEmpezar = document.getElementById('btnEmpezar');
     btnEmpezar.addEventListener("click",() => {
         document.getElementById('main-container').setAttribute("style","display:block;")
         document.getElementById('index').setAttribute("style","display:none;")
@@ -38,6 +38,30 @@ let init = () =>{
             }
         });
     })
+
+    const btnInicio = document.getElementById('btnInicio');
+    btnInicio.addEventListener("click",() => {
+        document.getElementById('main-container').setAttribute("style","display:none;")
+        document.getElementById('index').setAttribute("style","display:active;")
+
+    })
+
+    const btnHistorias = document.getElementById('btnHistorias');
+    btnHistorias.addEventListener("click",() => {
+        document.getElementById('main-container').setAttribute("style","display:block;")
+        document.getElementById('index').setAttribute("style","display:none;")
+        fetch('./historias.html')
+        .then(response=> response.text())
+        .then(text=> {
+            document.getElementById('main-container').innerHTML = text
+            if(navigation.classList.contains('active')){
+                document.getElementById('main-container').setAttribute("style","left: 20vw;")
+            }
+        });
+    })
+
+
+
     var url_string = (window.location.href).toLocaleLowerCase()
     var url = new URL(url_string)
     var page = url.searchParams.get("page")

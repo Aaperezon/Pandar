@@ -323,6 +323,8 @@ body
     display: flex;
     text-decoration: none;
     color: #fff;
+    background-color: transparent;
+    border: none;
 }
 .a:hover:not(:first-child)
 {
@@ -336,7 +338,7 @@ body
     color: #fb5c04 ;
 }
 .navigation ul li:hover:not(:first-child) button{
-    color: #0443a8;
+    color: #fb5c04 ;
 }
 .navigation ul li a .icon
 {
@@ -372,7 +374,7 @@ body
 }
 .navigation ul li button .icon ion-icon
 {
-    font-size: 2em;
+    font-size: 2.4em;
 }
 .navigation ul li a .title
 {
@@ -391,6 +393,8 @@ body
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
+    font-size: 1.2em;
+
 }
 
 
