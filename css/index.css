@@ -45,7 +45,7 @@
 body
 {
     min-height: 100vh;
-    background: #fff ;
+    background: rgb(255, 255, 255) ;
     margin: 0;
     padding: 0;
 }
@@ -64,7 +64,7 @@ body
     display: flex;
     text-align: center;
     justify-content: center;
-}
+}   
 .bubbles span img
 {
     position: relative;
@@ -73,6 +73,7 @@ body
     background-color: transparent;
     animation: animate 50s linear infinite;
     animation-duration: calc(200s / var(--i));
+    animation-timing-function: ease-in
 }
 .bubbles span img:nth-child(even)
 {
@@ -152,7 +153,7 @@ body
 .boton
 {
     background: none;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid #fb5c04 ;
     font-family: "montserrat", sans-serif;
     text-transform: uppercase;
     padding: 12px 20px;
@@ -175,7 +176,7 @@ body
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgb(230, 99, 11);
+    background: #ea9b2b;
     z-index: -1;
     transition: transform 0.5s;
     transform-origin: 0 0;
@@ -194,9 +195,9 @@ body
 {
     position: fixed;
     inset: 5vh;
-    background-color: #287affe5;
+    background-color: #e4c447 ;
     width: 80px;
-    border-left: 10px solid #287bff;
+    border-left: 10px solid #ea9b2b ;
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 15px 15px 25px rgb(0, 0, 0,0.05);
@@ -215,7 +216,7 @@ body
     right: 15px;
     width: 50px;
     height: 50px;
-    background: #fff;
+    background: rgb(251,92,4);
     border-radius: 50%;
     box-shadow: 5px 5px 10px rgba(0, 0,0, 0.15);
     cursor: pointer;
@@ -232,7 +233,7 @@ body
     width: 26px;
     height: 3px;
     border-radius: 3px;
-    background: #365fa1;
+    background: #ffffff;
     transform: translateY(-5px);
     transition: 1s;
 }
@@ -243,7 +244,7 @@ body
     width: 26px;
     height: 3px;
     border-radius: 3px;
-    background: #365fa1;
+    background: #ffffff;
     transform: translateY(5px);
     transition: 1s;
 }
@@ -332,7 +333,7 @@ body
     color: #365fa1;
 }
 .navigation ul li:hover:not(:first-child) a{
-    color: #0443a8;
+    color: #fb5c04 ;
 }
 .navigation ul li:hover:not(:first-child) button{
     color: #0443a8;
@@ -359,10 +360,11 @@ body
 {
     position: relative;
     display: block;
-    min-width: 60px;
-    height: 60px;
+    min-width: 50px;
+    height: 50px;
     line-height: 70px;
     text-align: center;
+    margin-left: 8px;
 }
 .navigation ul li a .icon ion-icon
 {
