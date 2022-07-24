@@ -1,12 +1,12 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 
-.container-fluid
+.faqs-container
 {
     width: 50%;
     margin: 0 auto;
     margin-top: 100px;
 }
-.container-fluid h2
+.faqs-container h2
 {
     color: hotpink;
     position: relative;
@@ -28,8 +28,8 @@
     margin: 0 10px 0 0;
     width: 30px;
     height: 30px; 
-    /* background: url("../images/toogleDespues.png"); */
-    background-color: #6db5ff;
+    background: url("../images/toogleDespues.png");
+    background-color: #6db6ff;
     border-radius: 50%;
     float: left;
     transition: all .5s ease-in;

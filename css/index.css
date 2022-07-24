@@ -400,7 +400,7 @@ body
 
 
 /* main container settings */
-#main-container{
+.main-container{
     background-color: rgba(255, 255, 255, 0.336);
     box-shadow: 0 3px 13px 1px rgb(255, 255, 255);
     position: absolute;

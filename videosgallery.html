@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="./css/gallery.css">
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="./css/videogallery.css">
+<!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+<!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 
 
 <div class="center">
@@ -42,15 +42,4 @@
         </div>
     </div>
 </div>
-<script>
-var video = document.querySelectorAll('video');
-video.forEach(play => play.addEventListener('click',() =>{
-    play.classList.toggle('active');
-    if(play.paused){
-        play.play();
-    }else{
-        play.pause();
-        play.currentTime=0;
-    }
-}));
-</script>
+<!-- <script src="./js/videogallery.js"></script> -->
