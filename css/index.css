@@ -401,8 +401,9 @@ body
 
 /* main container settings */
 .main-container{
-    background-color: rgba(255, 255, 255, 0.336);
+    background-color: #e4c44788 ;
     box-shadow: 0 3px 13px 1px rgb(255, 255, 255);
+    border-radius: 25px;
     position: absolute;
     left: 12vw;
     right: 8vw;
@@ -412,5 +413,7 @@ body
     overflow: auto;
     transition: 0.5s;
     z-index: 1;
+    padding-top: 2%;
+    padding-bottom: 2%;
 
 }
