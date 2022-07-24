@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); */
 
-body
-{
-    font-family:'Baloo Bhaina 2',cursive;
-    background-color: #eee;
-}
 .container-fluid
 {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 100px;
 }
@@ -26,16 +21,19 @@ body
     display: flex;
     margin: 10px 0;
     align-items: center;
+
 }
 .accordion .icon
 {
     margin: 0 10px 0 0;
     width: 30px;
-    height: 30px;
-    background: url(toogleDespues.png) no-repeat 8px 7px #6db5ff;
+    height: 30px; 
+    /* background: url("../images/toogleDespues.png"); */
+    background-color: #6db5ff;
     border-radius: 50%;
     float: left;
     transition: all .5s ease-in;
+    z-index: 4;
     
 }
 .accordion h5
@@ -58,16 +56,16 @@ body
     max-height: 0;
     transition: all .5s ease-in;
 }
-.active .icon
+.active-preguntas .icon
 {
-    background: url(toogleAntes.png) no-repeat 8px -25px #fff;
+    background: url("../images/toogleAntes.png") no-repeat 8px -25px #fff;
 }
-.active
+.active-preguntas
 {
     background-color: #6db5ff;
     color: #fff;
 }
-.active h5
+.active-preguntas h5
 {
     color: #fff;
 }
