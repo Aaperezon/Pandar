@@ -25,7 +25,6 @@ let init = () =>{
             play.currentTime=0;
         }
     }));
-
     //Function to hide every div of the main container (right content on the page)
     let hide_all = () =>{
         for(var i  = 0; i < main_container.length; i++){

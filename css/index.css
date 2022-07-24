@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+h1
+{
+    font-family: 'Amatic SC', cursive;
+    position: relative;
+    font-size: 5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding-top: 95vh;
+
+}
 .background{
     opacity: 70%;
 }
@@ -48,8 +61,7 @@ body
     background: rgb(255, 255, 255) ;
     margin: 0;
     padding: 0;
-}
-
+}  
 .container
 {
     position: fixed;
