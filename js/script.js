@@ -60,6 +60,20 @@ let init = () =>{
         });
     })
 
+    const btnPreguntas = document.getElementById('btnPreguntas');
+    btnPreguntas.addEventListener("click",() => {
+        document.getElementById('main-container').setAttribute("style","display:block;")
+        document.getElementById('index').setAttribute("style","display:none;")
+        fetch('./faqs.html')
+        .then(response=> response.text())
+        .then(text=> {
+            document.getElementById('main-container').innerHTML = text
+            if(navigation.classList.contains('active')){
+                document.getElementById('main-container').setAttribute("style","left: 20vw;")
+            }
+        });
+    })
+
 
 
     var url_string = (window.location.href).toLocaleLowerCase()
