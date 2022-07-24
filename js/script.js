@@ -4,10 +4,15 @@ let init = () =>{
     let toogle= document.querySelector('.toogle');
     toogle.onclick = function(){
         navigation.classList.toggle('active');
-        if(navigation.classList.contains('active') && window.getComputedStyle(main_container).display!='none'){
-            document.getElementById('main-container').setAttribute("style","left: 20vw;")
-        }else if (window.getComputedStyle(main_container).display!='none'){
-            document.getElementById('main-container').setAttribute("style","left: 12vw;")
+        // if(navigation.classList.contains('active') && window.getComputedStyle(main_container).display!='none'){
+        if(navigation.classList.contains('active')){
+            for(var i  = 0; i < main_container.length; i++){
+                main_container[i].style.left = "20vw"
+            }
+        }else{
+            for(var i  = 0; i < main_container.length; i++){
+                main_container[i].style.left = "12vw"
+            }
         }
     }
     var video = document.querySelectorAll('video');
@@ -57,7 +62,7 @@ let init = () =>{
         document.getElementById('index').setAttribute("style","display:active;")
 
     })
-    //END of historias
+    //END of videosgallery
 
 
     //LOAD historias dinamically
