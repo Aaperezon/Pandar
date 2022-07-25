@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 .faqs-container
 {
@@ -7,14 +8,17 @@
 }
 .faqs-container h2
 {
-    color: hotpink;
+    color: black;
     position: relative;
+    font-family: 'Amatic SC', cursive;
+    font-size: 5rem;
 }
 .accordion
 {
     width: 100%;
     padding: 0 5px;
-    border: 2px solid #6db5ff;
+    background-color: rgb(251,92,4,0.5);
+    border: 2px solid rgb(255,255,255);
     cursor: pointer;
     border-radius: 50px;
     display: flex;
@@ -27,8 +31,9 @@
     margin: 0 10px 0 0;
     width: 30px;
     height: 30px; 
-    background: url("../images/toogleDespues.png");
-    background-color: #6db6ff;
+    background-image: url("../images/toogle_expandir.png");
+    background-size: cover;
+    background-color: rgb(251,92,4);
     border-radius: 50%;
     float: left;
     transition: all .5s ease-in;
@@ -37,11 +42,12 @@
 }
 .accordion h5
 {
-    font-size: 22px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5rem;
     margin: 0;
     padding: 3px 0 0 0;
     font-weight: normal;
-    color: #1f5c9a;
+    color: rgb(0,0,0);
     transition: all .5s ease-in;
 }
 .panel
@@ -57,11 +63,13 @@
 }
 .active-preguntas .icon
 {
-    background: url("../images/toogleAntes.png") no-repeat 8px -25px #fff;
+    background: url("../images/toogle_contraer.png") #fff;
+    background-size: cover;
+
 }
 .active-preguntas
 {
-    background-color: #6db5ff;
+    background-color: rgb(251,92,4,0.5);
     color: #fff;
 }
 .active-preguntas h5
