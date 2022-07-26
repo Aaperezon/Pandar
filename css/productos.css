@@ -1,26 +1,22 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap'); */
-
+*
+{
+    font-family: 'Amatic SC', cursive;
+}
 h4
 {
     font-size: 2rem;
 }
-/* body
+.bodyProductos
 {
     font-family: 'Amatic SC', cursive;
-} */
+} 
 
 p
 {
     color: #555;
     font-size: 1.5rem;
 }
-/* .container
-{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-} */
 .row
 {
     display: flex;
@@ -100,28 +96,6 @@ p
     width: 200px;
     height: 200px;
 }
-.title
-{
-    text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #000;
-    font-size: 5rem;
-    margin-top: 20px;
-}
-.title::after
-{
-    content: "";
-    background: #ff523b;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-}
 .col-4 p
 {
     font-size: 1.3rem;
@@ -148,43 +122,11 @@ small
 {
     color: #555;
 }
-.testimonial
-{
-    padding-top: 100px;
-}
-.testimonial .col-3
-{
-    text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-.testimonial .col-3 img
-{
-    width: 50px;
-    margin-top: 20px;
-    border-radius: 50%;
-}
-.testimonial .col-3:hover
-{
-    transform: translateY(-10px);
-}
 .col-3 p
 {
     font-size: 2rem;
     margin: 12px 0;
     color: #777;
-}
-.testimonial .col-3 h3
-{
-    font-weight: 600;
-    color: #555;
-    font-size: 16px;
-}
-.brands
-{
-    margin: 100px auto;
 }
 .col-5
 {

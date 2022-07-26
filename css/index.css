@@ -83,7 +83,7 @@ body
     background-color: transparent;
     animation: animate 50s linear infinite;
     animation-duration: calc(200s / var(--i));
-    animation-timing-function: ease-in
+    animation-timing-function: ease-in;
 }
 .bubbles span img:nth-child(even)
 {
@@ -363,6 +363,7 @@ body
 .navigation ul li a .title
 {
     position: relative;
+    font-size: 2rem;
     display: block;
     padding: 0 20px;
     height: 60px;
@@ -377,7 +378,7 @@ body
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
-    font-size: 1.2em;
+    font-size: 1.4rem;
 
 }
 ion-icon {
