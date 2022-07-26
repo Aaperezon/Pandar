@@ -102,6 +102,7 @@ p
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
+    transition: transform 0.5s;
 }
 .col-4 img
 {
@@ -129,4 +130,176 @@ p
     bottom: -30%;
     left: 50%;
     transform: translateX(-50%);
+}
+.col-4 p
+{
+    font-size: 1.3rem;
+}
+.rating ion-icon
+{
+    color:#ff523b;
+}  
+.col-4:hover
+{
+    transform: translateY(-5px);
+}
+.offer
+{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+.col-2 .offer-img
+{
+    padding: 50px;
+}
+small
+{
+    color: #555;
+}
+.testimonial
+{
+    padding-top: 100px;
+}
+.testimonial .col-3
+{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img
+{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover
+{
+    transform: translateY(-10px);
+}
+.col-3 p
+{
+    font-size: 2rem;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3
+{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+.brands
+{
+    margin: 100px auto;
+}
+.col-5
+{
+    width: 160px;
+}
+.col-5 img
+{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover
+{
+    filter: grayscale(0);
+}
+.row-2
+{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+.row-2 h2
+{
+   font-size: 3rem;
+}
+select
+{
+    border: 1px solid #ff523b;
+    padding: 5px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+}
+select:focus
+{
+    outline: none;
+}
+.page-btn
+{
+    margin: 0 auto 80px;
+    font-size: 1.3rem;
+}
+.page-btn span
+{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover
+{
+    background: #ff523b;
+    color: #fff;
+}
+.single-product
+{
+    margin-top: 80px;
+}
+.single-product .col-2 img
+{
+    padding: 0;
+}
+.single-product .col-2 
+{
+    padding: 20px;
+}
+.single-product h4
+{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select
+{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input
+{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    font-family: 'Amatic SC', cursive;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+input:focus
+{
+    outline: none;
+}
+.single-product ion-icon
+{
+    color:#ff523b;
+    margin-left: 10px;
+} 
+.small-img-row
+{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col
+{
+    flex-basis: 24%;
+    cursor: pointer;
 }

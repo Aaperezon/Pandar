@@ -13,20 +13,55 @@
     <link rel="stylesheet" href="./css/productos.css">
 </head>
 <body>
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="./images/arte/5.jpg" width="100%" id="ProductImg">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="./images/arte/1.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/arte/2.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/arte/3.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/arte/4.jpg" width="100%" class="small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Home / T-Shirt</p>
+                <h1>Red Printd T-Shirt by HRX</h1>
+                <h4>$50.00</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Agregar a carrito</a>
+                <h3>Product Details <ion-icon name="list-outline"></ion-icon></h3>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore modi quis illum voluptatum eveniet, ab aliquam, saepe architecto voluptas quaerat magnam animi voluptatibus provident vero excepturi eos? Aliquam, cumque dolores.</p>
+            </div>
+        </div>
+    </div>
     <div class="small-container">
         <div class="row row-2">
-            <h2>All Products</h2>
-            <select>
-                <option>Default Sorting</option>
-                <option>Sort by price</option>
-                <option>Sort by popularity</option>
-                <option>Sort by rating</option>
-                <option>Sort by sale</option>
-            </select>
+            <h2>Sugerencias de productos</h2>
+            <p>Ver mas</p>
         </div>
+    </div>
+    <div class="small-container">
         <div class="row">
             <div class="col-4">
-                <img src="./images/joyeria/1.jpg">
+                <img src="./images/joyeria/1.jpg" alt="">
                 <h4>Red Printed T-Shirt</h4>
                 <div class="rating">
                     <ion-icon name="star"></ion-icon>
@@ -73,64 +108,29 @@
                 </div>
                 <p>$50.00</p>
             </div>
-            <div class="col-4">
-                <img src="./images/joyeria/5.jpg" alt="">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="./images/hogar/1.jpg" alt="">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="./images/hogar/2.jpg" alt="">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="./images/hogar/3.jpg" alt="">
-                <h4>Red Printed T-Shirt</h4>
-                <div class="rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half-outline"></ion-icon>
-                </div>
-                <p>$50.00</p>
-            </div>
-        </div>
-        <div class="page-btn">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>&#8594;</span>
         </div>
     </div>
 </body>
 <footer>
-    <script src="./js/script.js"></script>
+    <script>
+        var ProductImg= document.getElementById("ProductImg");
+        var SmallImg=document.getElementsByClassName("small-img");
+        SmallImg[0].onclick= function()
+        {
+            ProductImg.src=SmallImg[0].src; 
+        }
+        SmallImg[1].onclick= function()
+        {
+            ProductImg.src=SmallImg[1].src; 
+        }
+        SmallImg[2].onclick= function()
+        {
+            ProductImg.src=SmallImg[2].src; 
+        }
+        SmallImg[3].onclick= function()
+        {
+            ProductImg.src=SmallImg[3].src; 
+        }
+    </script>
 </footer>
 </html>
