@@ -1,13 +1,14 @@
 let productos = () => {
     console.log("hello from productos.js")
     let productos= document.querySelectorAll('.producto');
-
+    var last_page
     var productos_array = Array.prototype.map.call(productos, function(element) {
         element.onclick = function(){
             //LOAD detallesProducto dinamically
             fetch('./detallesProducto.html')
             .then(response=> response.text())
             .then(text=> {
+                last_page = document.getElementById('productos').innerHTML
                 document.getElementById('productos').innerHTML = text
                 var ProductImg= document.getElementById("ProductImg");
                 var SmallImg=document.getElementsByClassName("small-img");
@@ -27,6 +28,17 @@ let productos = () => {
                 {
                     ProductImg.src=SmallImg[3].src; 
                 }
+                let regresarBtn = document.getElementById("regresarBtn")
+                regresarBtn.addEventListener("click", () => {
+                    console.log("regresar clicked")
+                    document.getElementById('productos').innerHTML = last_page
+                    window.productos = thisproductos()
+                    // let new_script = document.createElement("script")
+                    // new_script.src = "./js/productos.js"
+                    // document.body.appendChild(new_script)
+
+                })
+
             });
             //END of detallesProducto
         
