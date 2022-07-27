@@ -9,22 +9,25 @@ let productos = () => {
             .then(response=> response.text())
             .then(text=> {
                 document.getElementById('productos').innerHTML = text
-                if(navigation.classList.contains('active')){
-                    for(var i  = 0; i < main_container.length; i++){
-                        main_container[i].setAttribute("style","left: 20vw;")
-                    }       
+                var ProductImg= document.getElementById("ProductImg");
+                var SmallImg=document.getElementsByClassName("small-img");
+                SmallImg[0].onclick= function()
+                {
+                    ProductImg.src=SmallImg[0].src; 
                 }
-                document.getElementById('productos').setAttribute("style","display:none;")
-                // let new_script = document.createElement("script")
-                // new_script.src = "./js/productos.js"
-                // document.body.appendChild(new_script)
+                SmallImg[1].onclick= function()
+                {
+                    ProductImg.src=SmallImg[1].src; 
+                }
+                SmallImg[2].onclick= function()
+                {
+                    ProductImg.src=SmallImg[2].src; 
+                }
+                SmallImg[3].onclick= function()
+                {
+                    ProductImg.src=SmallImg[3].src; 
+                }
             });
-            const btnProductos = document.getElementById('btnProductos');
-            btnProductos.addEventListener("click",() => {
-                hide_all()
-                document.getElementById('index').setAttribute("style","display:none;")
-                document.getElementById('productos').setAttribute("style","display:block;")
-            })
             //END of detallesProducto
         
         }

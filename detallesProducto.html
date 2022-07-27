@@ -19,22 +19,36 @@
                 </div>
             </div>
             <div class="col-2">
-                <p>Home / T-Shirt</p>
-                <h1>Red Printd T-Shirt by HRX</h1>
-                <h4>$50.00</h4>
-                <select>
-                    <option>Select Size</option>
-                    <option>XXL</option>
-                    <option>XL</option>
-                    <option>Large</option>
-                    <option>Medium</option>
-                    <option>Small</option>
-                </select>
-                <input type="number" value="1">
-                <a href="" class="btn">Agregar a carrito</a>
-                <h3>Product Details <ion-icon name="list-outline"></ion-icon></h3>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore modi quis illum voluptatum eveniet, ab aliquam, saepe architecto voluptas quaerat magnam animi voluptatibus provident vero excepturi eos? Aliquam, cumque dolores.</p>
+                <div class="detalle">
+                    <a style="position: absolute; left: 50px; top: 30px; font-size: 1.8rem;" href="" class="btn">Regresar</a>
+                    <p style="margin-left: -380px;">Home / T-Shirt</p>
+                    <h1>Red Printd T-Shirt by HRX</h1>
+                    <div style="margin-left: -350px;" class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+                    <h4 style="margin-left: -420px;">$50.00</h4>
+                    <select>
+                        <option>Select Size</option>
+                        <option>XXL</option>
+                        <option>XL</option>
+                        <option>Large</option>
+                        <option>Medium</option>
+                        <option>Small</option>
+                    </select>
+                    <input  style="margin-left: -270px;" type="number" value="1">
+                    <a href="" class="btn">Agregar a carrito</a>
+                    <h3 style="margin-left: -350px;">Product Details <ion-icon name="list-outline"></ion-icon></h3>
+                    <br>
+                    <p style="text-align: justify ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore modi quis illum voluptatum eveniet, ab aliquam, saepe architecto voluptas quaerat magnam animi voluptatibus provident vero excepturi eos? Aliquam, cumque dolores.</p>
+                    
+                    <h3 style="margin-left: -360px; margin-top: 20px;"> <ion-icon name="pin-outline"></ion-icon> Tepoztlán, Morelos.</h3>
+                    <a style="margin-left: -360px;" href="" class="btn">Ver tienda</a>
+                
+                </div>
             </div>
         </div>
     </div>
@@ -97,22 +111,5 @@
         </div>
     </div>
     <script>
-        var ProductImg= document.getElementById("ProductImg");
-        var SmallImg=document.getElementsByClassName("small-img");
-        SmallImg[0].onclick= function()
-        {
-            ProductImg.src=SmallImg[0].src; 
-        }
-        SmallImg[1].onclick= function()
-        {
-            ProductImg.src=SmallImg[1].src; 
-        }
-        SmallImg[2].onclick= function()
-        {
-            ProductImg.src=SmallImg[2].src; 
-        }
-        SmallImg[3].onclick= function()
-        {
-            ProductImg.src=SmallImg[3].src; 
-        }
+     
     </script>

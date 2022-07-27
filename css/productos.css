@@ -1,8 +1,9 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 *
 {
     font-family: 'Amatic SC', cursive;
 }
+
 h4
 {
     font-size: 2rem;
@@ -20,7 +21,7 @@ p
 .row
 {
     display: flex;
-    align-items: center;
+    align-items: center; 
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -28,17 +29,23 @@ p
 {
     flex-basis: 50%;
     min-width: 300px;
+
+
 }
 .col-2 img
 {
     max-width: 100%;
     padding: 50px 0;
 }
+.detalle{
+    margin-left: 0px
+}
 .col-2 h1
 {
     font-size: 50px;
     line-height: 60px;
-    margin: 25px 0;
+    /* margin: 25px 0; */
+    margin-left: -120px;
 }
 .btn
 {
