@@ -2,27 +2,181 @@
     {
      "folder" : "textil",
      "quantity":5,
-     "class":1   
+     "class":1,
+     "recommendations":[
+      {
+        "image_src":"1.jpg",
+        "title":"Manteles decorativos",
+        "price": 120
+      },
+      {
+        "image_src":"2.jpg",
+        "title":"Camiseta tipica",
+        "price": 100
+      },
+      {
+        "image_src":"3.jpg",
+        "title":"Blusa y bolsa artesanal",
+        "price": 500
+      },
+      {
+        "image_src":"4.jpg",
+        "title":"Mantel blanco con flor",
+        "price": 130
+      },
+      {
+        "image_src":"5.jpg",
+        "title":"Cobija con adornos tipicos",
+        "price": 200
+      }]
     },
     {
       "folder" : "ceramica",
       "quantity":5,
-      "class":2  
+      "class":2,
+      "recommendations":[
+        {
+          "image_src":"1.jpg",
+          "title":"jarrón de ceramica",
+          "price": 120
+        },
+        {
+          "image_src":"2.jpg",
+          "title":"jarron decorado artesanal",
+          "price": 100
+        },
+        {
+          "image_src":"3.jpg",
+          "title":"juego de jarrones con flor",
+          "price": 400
+        },
+        {
+          "image_src":"4.jpg",
+          "title":"ollas de ceramica",
+          "price": 130
+        },
+        {
+          "image_src":"5.jpg",
+          "title":"tazas de ceramica",
+          "price": 100
+        }]
     },
     {
       "folder" : "joyeria",
       "quantity":5,
-      "class":3 
+      "class":3,
+      "recommendations":[
+        {
+          "image_src":"1.jpg",
+          "title":"juego de collares turqueza",
+          "price": 600
+        },
+        {
+          "image_src":"2.jpg",
+          "title":"juego de artes con collar",
+          "price": 400
+        },
+        {
+          "image_src":"3.jpg",
+          "title":"collar de perlas artesanal",
+          "price": 300
+        },
+        {
+          "image_src":"4.jpg",
+          "title":"aretes con pluma",
+          "price": 130
+        },
+        {
+          "image_src":"5.jpg",
+          "title":"juego de collar con aretes",
+          "price": 400
+        }]
     },
     {
       "folder" : "arte",
       "quantity":10,
-      "class":4
+      "class":4,
+      "recommendations":[
+        {
+          "image_src":"1.jpg",
+          "title":"calabera de plastilina con dientes rojos",
+          "price": 200
+        },
+        {
+          "image_src":"2.jpg",
+          "title":"juego de tres calaberitas",
+          "price": 400
+        },
+        {
+          "image_src":"3.jpg",
+          "title":"calaberita de bolitas",
+          "price": 100
+        },
+        {
+          "image_src":"4.jpg",
+          "title":"calaberita de madera",
+          "price": 200
+        },
+        {
+          "image_src":"5.jpg",
+          "title":"calaberita de papel",
+          "price": 250
+        }, {
+          "image_src":"6.jpg",
+          "title":"muñeca de trapo",
+          "price": 200
+        },
+        {
+          "image_src":"7.jpg",
+          "title":"muñeca de trapo",
+          "price": 200
+        },
+        {
+          "image_src":"8.jpg",
+          "title":"muñecas de trapo",
+          "price": 120
+        },
+        {
+          "image_src":"9.jpg",
+          "title":"muñeca de trapo",
+          "price": 180
+        },
+        {
+          "image_src":"10.jpg",
+          "title":"muñeca mexicana",
+          "price": 150
+        }]
     },
     {
       "folder" : "hogar",
       "quantity":5,
-      "class":5
+      "class":5,
+      "recommendations":[
+      {
+        "image_src":"1.jpg",
+        "title":"mantel para mesa",
+        "price": 230
+      },
+      {
+        "image_src":"2.jpg",
+        "title":"Mueble buró ",
+        "price": 600
+      },
+      {
+        "image_src":"3.jpg",
+        "title":"caja de seguridad artesanal",
+        "price": 300
+      },
+      {
+        "image_src":"4.jpg",
+        "title":"repisa artesanal",
+        "price": 390
+      },
+      {
+        "image_src":"5.jpg",
+        "title":"porta retratos artesanal",
+        "price": 270
+      }]
     }
    
 
