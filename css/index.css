@@ -417,11 +417,11 @@ ion-icon {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: red; 
+    background: #fb5c04; 
     border-radius: 200px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
+    background: #fb5c04; 
   }

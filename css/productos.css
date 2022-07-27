@@ -3,6 +3,10 @@
 {
     font-family: 'Amatic SC', cursive;
 }
+h3
+{
+    font-size: 1.5rem;
+}
 
 h4
 {
@@ -15,7 +19,7 @@ h4
 
 p
 {
-    color: #555;
+    color: #000;
     font-size: 1.5rem;
 }
 .row
@@ -51,6 +55,7 @@ p
 {
     display: inline-block;
     background: #ff523b;
+    font-size: 1.2rem;
     color: #fff;
     padding: 8px 30px;
     margin: 30px 0;
@@ -127,13 +132,13 @@ p
 }
 small
 {
-    color: #555;
+    color: #000;
 }
 .col-3 p
 {
     font-size: 2rem;
     margin: 12px 0;
-    color: #777;
+    color: #000;
 }
 .col-5
 {
