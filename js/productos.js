@@ -32,11 +32,6 @@ let productos = () => {
                 regresarBtn.addEventListener("click", () => {
                     console.log("regresar clicked")
                     document.getElementById('productos').innerHTML = last_page
-                    window.productos = thisproductos()
-                    // let new_script = document.createElement("script")
-                    // new_script.src = "./js/productos.js"
-                    // document.body.appendChild(new_script)
-
                 })
 
             });
@@ -47,4 +42,5 @@ let productos = () => {
    
 
 }
-window.addEventListener("load", productos());
+setInterval( productos, 500);
+// window.addEventListener("load", productos());
