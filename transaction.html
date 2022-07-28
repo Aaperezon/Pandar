@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+      }
+  </script>
     <meta charset="UTF-8">
-    <title>Ether front-end</title>
-    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script language="javascript" type="text/javascript" src="./js/web3.min.js"></script>
+    <title></title>
+    <script language="javascript" type="text/javascript" src="./js/ethers.min.js"></script>
     <script language="javascript" type="text/javascript" src="./js/pandar_abi.js"></script>
   </head>
   <body>
-
     <script>
-      const privKey = '0xPRIVKEY';
-      let provider = new ethers.providers.JsonRpcProvider('RPC_URL');
-      let wallet = new ethers.Wallet(privKey, provider);
 
-       
+      let contract_address = "0x02E50Cd722c125978618D0683c76BaFa56c85958"
+      let contract_abi  = pandar_abi
+      const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+      provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(contract_address, contract_abi, signer)
+      console.log("Account:",  signer.getAddress());
+
+      const buyArticle = (event) => {
+        console.log("boton comprar articulo")
+        contract.buyProduct(document.getElementById("id2").value, document.getElementById("quantity2").value)
+      }
+
+
+      const addProduct = (event) => {
+        console.log("boton agregar articulo")
+        contract.newProduct(document.getElementById("id1").value, document.getElementById("price").value,document.getElementById("quantity1").value)
+      }
+
     </script>
+
+
+
+    <form action="#" onSubmit="addProduct()">
+      <input id="id1" type="text" >id
+      <br>
+      <input id="price" type="text" >price
+      <br>
+      <input id="quantity1" type="text" >quantity
+      <br>
+      <button type="submit">Agregar producto</button>
+    </form>
+    <br><br><br>
+
+    <form action="#" onSubmit="buyArticle()">
+      <input  id="id2" type="text" value="1">
+      <input  id="quantity2" type="text" value="1">
+      <button type="submit">Comprar</button>
+    </form>
+
 
 
   </body>
