@@ -102,6 +102,7 @@ let init = () =>{
         let new_script = document.createElement("script")
         new_script.src = "./js/productos.js"
         document.body.appendChild(new_script)
+         
     });
     const btnProductos = document.getElementById('btnProductos');
     btnProductos.addEventListener("click",() => {

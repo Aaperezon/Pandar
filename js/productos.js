@@ -35,6 +35,7 @@ let productos = () => {
                 })
 
                 AIRecommendations()
+                cryptoTransaction()
 
             });
             //END of detallesProducto
@@ -55,46 +56,43 @@ let productos = () => {
         const init = async function(train_data) {
             let waitForImage = (image) =>{
                 return new Promise(resolve => {
-                image.onload = function () {
+                    image.onload = function () {
                         resolve('resolved');
                     }
-            });
-        }
-
-        const classifier = knnClassifier.create();
-        const mobilenetModule = await mobilenet.load();
-
-        for(var i = 0; i < train_data.length; i++ ){
-            for(var j = 1; j <= train_data[i].quantity; j++){
-            var image = new Image();
-            image.src = './images/'+train_data[i].folder+'/'+j+'.jpg';
-            await waitForImage(image)
-            var logits = mobilenetModule.infer(image, true);
-            classifier.addExample(logits, train_data[i].class);
+                })
             }
-        }
 
-        function shuffle(array) {
-            let currentIndex = array.length,  randomIndex;
-          
-            // While there remain elements to shuffle.
-            while (currentIndex != 0) {
-          
-              // Pick a remaining element.
-              randomIndex = Math.floor(Math.random() * currentIndex);
-              currentIndex--;
-          
-              // And swap it with the current element.
-              [array[currentIndex], array[randomIndex]] = [
-                array[randomIndex], array[currentIndex]];
+            const classifier = knnClassifier.create();
+            const mobilenetModule = await mobilenet.load();
+
+            for(var i = 0; i < train_data.length; i++ ){
+                for(var j = 1; j <= train_data[i].quantity; j++){
+                var image = new Image();
+                image.src = './images/'+train_data[i].folder+'/'+j+'.jpg';
+                await waitForImage(image)
+                var logits = mobilenetModule.infer(image, true);
+                classifier.addExample(logits, train_data[i].class);
+                }
             }
-          
-            return array;
-        }
 
+            function shuffle(array) {
+                let currentIndex = array.length,  randomIndex;
+            
+                // While there remain elements to shuffle.
+                while (currentIndex != 0) {
+            
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+            
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+                }
+            
+                return array;
+            }
 
-        //Create Async Function
-            // Make a prediction.
             const x = tf.browser.fromPixels(document.getElementById('ProductImg'));
             const xlogits = mobilenetModule.infer(x, true);
             console.log('Predictions:');
@@ -118,8 +116,45 @@ let productos = () => {
 
         }
     }
+    let cryptoTransaction = () =>{
+        //Crypto transactions
+        let contract
+        let wallet_connected = false
+        let isWalletConnected = () =>{
+        if(wallet_connected == true)
+        return true
+        let contract_address = "0x02E50Cd722c125978618D0683c76BaFa56c85958"
+        let contract_abi  = pandar_abi
+        const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+        provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        contract = new ethers.Contract(contract_address, contract_abi, signer)
+        // console.log("Account:",  signer.getAddress());
+        wallet_connected = true
+        return true
+        }
+    
+        const addProduct = (event) => {
+        isWalletConnected()
+        console.log("boton agregar articulo")
+        contract.newProduct(document.getElementById("id1").value, document.getElementById("price").value,document.getElementById("quantity1").value)
+        }
+    
+    
+    
+        let cryptoBtn = document.getElementById("cryptoBtn")
+        cryptoBtn.addEventListener("click",() => {
+        console.log("crypto button")
+        isWalletConnected()
+        console.log("boton comprar articulo")
+        contract.buyProduct(document.getElementById("id2").value, document.getElementById("quantity2").value)
+        })
+    }
+
+    
    
 
 }
-setInterval( productos, 1000);
-// window.addEventListener("load", productos());
+
+// setInterval( productos, 1000);
+window.addEventListener("load", productos());

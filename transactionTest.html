@@ -14,21 +14,33 @@
   <body>
     <script>
 
-      let contract_address = "0x02E50Cd722c125978618D0683c76BaFa56c85958"
-      let contract_abi  = pandar_abi
-      const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
-      provider.send("eth_requestAccounts", []);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(contract_address, contract_abi, signer)
-      console.log("Account:",  signer.getAddress());
+      let contract
+      let wallet_connected = false
+      let isWalletConnected = () =>{
+        if(wallet_connected == true)
+          return true
+        let contract_address = "0x02E50Cd722c125978618D0683c76BaFa56c85958"
+        let contract_abi  = pandar_abi
+        const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+        provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        contract = new ethers.Contract(contract_address, contract_abi, signer)
+        // console.log("Account:",  signer.getAddress());
+        wallet_connected = true
+        return true
+      }
+    
+    
 
       const buyArticle = (event) => {
+        isWalletConnected()
         console.log("boton comprar articulo")
         contract.buyProduct(document.getElementById("id2").value, document.getElementById("quantity2").value)
       }
 
 
       const addProduct = (event) => {
+        isWalletConnected()
         console.log("boton agregar articulo")
         contract.newProduct(document.getElementById("id1").value, document.getElementById("price").value,document.getElementById("quantity1").value)
       }
@@ -49,8 +61,8 @@
     <br><br><br>
 
     <form action="#" onSubmit="buyArticle()">
-      <input  id="id2" type="text" value="1">
-      <input  id="quantity2" type="text" value="1">
+      <input  hidden id="id2" type="text" value="1">
+      <input  hidden id="quantity2" type="text" value="1">
       <button type="submit">Comprar</button>
     </form>
 
