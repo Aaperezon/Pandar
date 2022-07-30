@@ -123,7 +123,7 @@ let productos = () => {
         let isWalletConnected = () =>{
         if(wallet_connected == true)
         return true
-        let contract_address = "0x02E50Cd722c125978618D0683c76BaFa56c85958"
+        let contract_address = "0x2A19705edfb7D7D034caadFCAe9C9e76D9eE0C01"
         let contract_abi  = pandar_abi
         const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
         provider.send("eth_requestAccounts", []);
